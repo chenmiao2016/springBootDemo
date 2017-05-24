@@ -4,7 +4,7 @@ MAINTAINER chen_miao 510473319@qq.com
 ENV LANG en_US.UTF-8
 ENV LC_ALL en_US.UTF-8
 
-ENTRYPOINT ["/bin/sh","-c","/etc/rc.d/rc.local;/usr/sbin/sshd -D"]
+ENTRYPOINT ["/bin/sh","-c","/etc/rc.d/rc.local;while true; do sleep 60; done"]
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime; \
   mkdir -p /etc/yum.repos.d/bak; \
